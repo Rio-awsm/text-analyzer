@@ -9,7 +9,13 @@ lowercase.addEventListener("click", ()=>{
     inpText.value = inpText.value.toLowerCase()
 })
 
+removeSpace.addEventListener("click", ()=>{
+    console.log("Removing Extra Spaces")
+    inpText.value = inpText.value.replaceAll(/\s+/g," ").trim();
+})
+
 inpText.addEventListener("input",()=>{
     charCount.innerText = inpText.value.length
     wordCount.innerText = inpText.value.trim().split(" ").length
 })
+
