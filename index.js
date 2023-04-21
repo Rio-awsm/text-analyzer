@@ -14,6 +14,11 @@ removeSpace.addEventListener("click", ()=>{
     inpText.value = inpText.value.replaceAll(/\s+/g," ").trim();
 })
 
+removeLines.addEventListener("click", ()=>{
+    console.log("Removing Extra New Lines")
+    inpText.value = inpText.value.replaceAll(/\n+/g,"\n").trim();
+})
+
 inpText.addEventListener("input",()=>{
     charCount.innerText = inpText.value.length
     wordCount.innerText = inpText.value.trim().split(" ").length
